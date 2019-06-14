@@ -1,11 +1,5 @@
 import React, { Component } from "react";
 
-// const NavBar=()=>{
-//     return(
-
-//     )
-// }
-
 class NavBar extends Component {
   render() {
     return (
