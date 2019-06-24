@@ -14,18 +14,20 @@ class Counter extends Component {
     console.log("props", this.props);
     return (
       <div>
+        <h3> {this.props.counter.name}</h3>
+        <img src={this.props.counter.source} height="100" width="100" />
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button
           onClick={() => this.props.onIncrement(this.props.counter)}
           className="btn btn-secondary btn-sm"
         >
-          Increment
+          +
         </button>
         <button
           onClick={() => this.props.onToDelete(this.props.counter.id)}
           className="btn btn-danger btn-sm m-2"
         >
-          Delete
+          -
         </button>
       </div>
     );
@@ -39,7 +41,7 @@ class Counter extends Component {
 
   formatCount() {
     const { value: count } = this.props.counter;
-    return count === 0 ? "Zero" : count;
+    return count === 0 ? 0 : count;
   }
 }
 

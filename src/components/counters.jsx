@@ -9,7 +9,7 @@ class Counters extends Component {
     return (
       <div>
         <button onClick={onClear} className="btn btn-primary btn-sm m-2">
-          Clear
+          Clear Cart
         </button>
         {counters.map(counter => (
           <Counter
